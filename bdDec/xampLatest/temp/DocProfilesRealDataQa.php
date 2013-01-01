@@ -1,0 +1,255 @@
+<html>
+	<head>
+		<style>
+			body {
+				font-weight: lighter;
+			}
+			.left {
+				float: left;
+			}
+			.right {
+				float: right;
+			}
+			.clearAll {
+				clear: both;
+			}
+			.main_container {
+				margin: auto;
+				width: 1040px;
+			}
+			.main_content {
+				margin: 0 auto;
+				width: 1040px;
+			}
+			.main_content ul {
+				padding-top: 10px;
+				width: 1040px;
+			}
+			h1 {
+				font-size: 18pt;
+				font-weight: lighter;
+			}
+			h3 {
+				font-size: 16pt;
+				font-weight: lighter;
+				margin: 0;
+			}
+			h6 {
+				font-weight: lighter;
+				margin-top: 0;
+			}
+			.header span.arrow {
+				background: url('images/dropDownArrow.png') no-repeat 0 0 transparent;
+				width: 50px;
+				height: 20px;
+				display: block;
+			}
+			.header span {
+				float: left;
+			}
+			.shadow {
+				-moz-box-shadow: 3px 3px 4px gray;
+				-webkit-box-shadow: 3px 3px 4px gray;
+				box-shadow: 3px 3px 4px gray;
+				/* For IE 8 */
+				-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='gray')";
+				/* For IE 5.5 - 7 */
+				filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='gray');
+			}
+			.filter_div {
+				height: 100px;
+			}
+			.main_content ul li {
+				float: left;
+				list-style: none outside none;
+				width: 50%;
+				height: 177px;
+				margin-bottom: 60px;
+			}
+			.grad_bg {
+				background-image: -webkit-linear-gradient(300deg, white, black, white); /* webkit browsers (Chrome & Safari) */
+				background-image: -moz-linear-gradient(300deg, white, black, white); /* Mozilla browsers (Firefox) */
+				filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#000000', gradientType='1'); /* Internet Explorer */
+				background-image: -o-linear-gradient(300deg,rgb(255,255,255),rgb(0,0,0) 50%,rgb(255,255,255) 100%); /* Opera */
+			}
+			.main_content ul li > div {
+				height: 157px;
+				background: url("images/DocPageGradient.png") repeat scroll 0 0 transparent;
+				padding: 20px;
+				width: 80%
+			}
+
+			.docDescrip {
+				padding-left: 20px;
+			}
+			.gradient {
+				background: url('images/horLine.png') no-repeat 0 0 transparent;
+				height: 12px;
+			}
+			.subfooter span {
+				width: 33%;
+				float: left;
+			}
+			.checked {
+				background: url('images/likeDoc.png') no-repeat right top transparent;
+				height: 21px;
+			}
+			.unchecked {
+				background: url('images/likeDocDisabled.png') no-repeat right top transparent;
+				height: 21px;
+			}
+		</style>
+	</head>
+	<body>
+		<?php
+
+		require_once (realpath(dirname(__FILE__) . '/Database/connection2.php'));
+		//This will provide a connection to the database.
+
+		$sql = 'select * from test';
+		?>
+
+		<div id="main_container" class="main_container">
+			<header class="header">
+				<h1 class="left">Providers</h1>
+				<div class='right'>
+					<span >Filter</span><span class="arrow"></span>
+					<span>Location</span><span class="arrow"></span>
+				</div>
+			</header>
+			<div class="clearAll"></div>
+			<div class="filter_div shadow"></div>
+			<div class="main_content">
+				<ul>
+					<?php
+					if ($result = mysql_query($sql, $connection)) {
+						 $x = getDocInfo($result);
+						echo $x;
+					} else {
+						echo "Select failed";
+					}
+					?>
+					<li >
+						<div class="left shadow">
+							<img src="images/DocPic1.png" alt="Doc1" />
+							<div class="right docDescrip">
+								<h3>Antony Dobson, M.D., Ph.D.</h3>
+								<h6>Fertility, Infertility, Obstetrics &amp; Gynecology</h6>
+								<span>New York, Medical Center</span>
+							</div>
+							<div class="clearAll"></div>
+							<div class="gradient"></div>
+							<div class="subfooter">
+								<span>Contact me</span>
+								<span>509 Like</span>
+								<span class="unchecked"></span>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="left shadow">
+							<img src="images/DocPic2.png" alt="Doc1" />
+							<div class="right docDescrip">
+								<h3>John Davis, M.D., Ph.D.</h3>
+								<h6>Fertility, Infertility, Obstetrics &amp; Gynecology</h6>
+								<span>New York, Medical Center</span>
+							</div>
+							<div class="clearAll"></div>
+							<div class="gradient"></div>
+							<div class="subfooter">
+								<span>Contact me</span>
+								<span>509 Like</span>
+								<span class="unchecked"></span>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="left shadow">
+							<img src="images/DocPic3.png" alt="Doc1" />
+							<div class="right docDescrip">
+								<h3>Ram Paleti, M.D., Ph.D.</h3>
+								<h6>Fertility, Infertility, Obstetrics &amp; Gynecology</h6>
+								<span>New York, Medical Center</span>
+							</div>
+							<div class="clearAll"></div>
+							<div class="gradient"></div>
+							<div class="subfooter">
+								<span>Contact me</span>
+								<span>509 Like</span>
+								<span class="unchecked"></span>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="left shadow">
+							<img src="images/DocPic4.png" alt="Doc1" />
+							<div class="right docDescrip">
+								<h3>John Doe, M.D., Ph.D.</h3>
+								<h6>Fertility, Infertility, Obstetrics &amp; Gynecology</h6>
+								<span>New York, Medical Center</span>
+							</div>
+							<div class="clearAll"></div>
+							<div class="gradient"></div>
+							<div class="subfooter">
+								<span>Contact me</span>
+								<span>509 Like</span>
+								<span class="unchecked"></span>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="left shadow">
+							<img src="images/DocPic1.png " alt="Doc1" />
+							<div class="right docDescrip">
+								<h3>Antony Dobson, M.D., Ph.D.</h3>
+								<h6>Fertility, Infertility, Obstetrics &amp; Gynecology</h6>
+								<span>New York, Medical Center</span>
+							</div>
+							<div class="clearAll"></div>
+							<div class="gradient"></div>
+							<div class="subfooter">
+								<span>Contact me</span>
+								<span>509 Like</span>
+								<span class="unchecked"></span>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="left shadow">
+							<img src="images/DocPic1.png" alt="Doc1" />
+							<div class="right docDescrip">
+								<h3>Antony Dobson, M.D., Ph.D.</h3>
+								<h6>Fertility, Infertility, Obstetrics &amp; Gynecology</h6>
+								<span>New York, Medical Center</span>
+							</div>
+							<div class="clearAll"></div>
+							<div class="gradient"></div>
+							<div class="subfooter">
+								<span>Contact me</span>
+								<span>509 Like</span>
+								<span class="unchecked"></span>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div><!-- end of main_container -->
+	</body>
+</html>
+
+<?php
+function getDocInfo($docInfoJson) {
+
+	$retStr = '';
+	while ($row = mysql_fetch_assoc($docInfoJson)) {
+		$retStr .= '<li> <div class="left shadow"><img src="images/DocPic1.png" alt="Doc1" /> <div class="right docDescrip">';
+		$retStr .= '<h3>' . $row["col1"] . ' ' .$row["col2"] . '</h3>';
+		$retStr .= '<h6>' . $row["col4"] . '</h6>';
+		$retStr .= '</div><div class="clearAll"></div><div class="gradient"></div><div class="subfooter">';
+		$retStr .= '<span>Contact me</span><span>509 Like</span><span class="unchecked"></span>';
+		$retStr .= '</div></div></li>';
+
+	}
+	return $retStr;
+}
+?>

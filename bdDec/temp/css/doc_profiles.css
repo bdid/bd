@@ -1,0 +1,107 @@
+.main_content {
+	margin: 0 auto;
+	width: 1040px;
+}
+.main_content ul {
+	padding-top: 10px;
+	width: 1040px;
+}
+h1 {
+	font-size: 18pt;
+	font-weight: lighter;
+}
+h3 {
+	font-size: 16pt;
+	font-weight: lighter;
+	margin: 0;
+}
+h6 {
+	font-weight: lighter;
+	margin-top: 0;
+}
+.header span.arrow {
+	background: url('../images/dropDownArrow.png') no-repeat 0 0 transparent;
+	width: 50px;
+	height: 20px;
+	display: block;
+}
+.header span {
+	float: left;
+}
+.shadow {
+	-moz-box-shadow: 3px 3px 4px gray;
+	-webkit-box-shadow: 3px 3px 4px gray;
+	box-shadow: 3px 3px 4px gray;
+	/* For IE 8 */
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='gray')";
+	/* For IE 5.5 - 7 */
+	filter: progid :DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='gray');
+}
+.filter_div {
+	height: 100px;
+}
+.main_content ul li {
+	float: left;
+	list-style: none outside none;
+	width: 50%;
+	height: 177px;
+	margin-bottom: 60px;
+}
+
+.main_content ul li {
+	color: #0099CC;
+}
+
+.grad_bg {
+	background-image: -webkit-linear-gradient(300deg, white, black, white); /* webkit browsers (Chrome & Safari) */
+	background-image: -moz-linear-gradient(300deg, white, black, white); /* Mozilla browsers (Firefox) */
+	filter: progid :DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#000000', gradientType='1'); /* Internet Explorer */
+	background-image: -o-linear-gradient(300deg,rgb(255,255,255),rgb(0,0,0) 50%,rgb(255,255,255) 100%); /* Opera */
+}
+.main_content ul li > div {
+	height: 157px;
+	background: url("../images/DocPageGradient.png") repeat scroll 0 0 transparent;
+	padding: 20px;
+	width: 80%
+}
+
+.docDescrip {
+	padding-left: 20px;
+}
+.gradient {
+	background: url('../images/horLine.png') no-repeat 0 0 transparent;
+	height: 12px;
+}
+.subfooter span {
+	width: 33%;
+	float: left;
+}
+.checked {
+	background: url('../images/likeDoc.png') no-repeat right top transparent;
+	height: 21px;
+}
+.unchecked {
+	background: url('../images/likeDocDisabled.png') no-repeat right top transparent;
+	height: 21px;
+}
+.checkbox.inactive {
+	background: url("../images/checkbox_inactive.png") no-repeat scroll left top transparent;
+	float: left;
+	height: 29px;
+	padding-right: 20px;
+	width: 29px;
+}
+.checkbox.active {
+	background: url("../images/checkbox_active.png") no-repeat scroll left top transparent;
+	float: left;
+	height: 29px;
+	padding-right: 20px;
+	width: 29px;
+}
+.checkboxDiv table {
+	width: 100%;
+}
+.checkboxDiv table td {
+	padding: 10px 20px 0;
+	width : 30%;
+}

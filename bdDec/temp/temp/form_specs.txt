@@ -1,0 +1,33 @@
+First Name txt -- docs_basic_info
+Last Name txt -- docs_basic_info
+ Picture txt browse -- file folder
+ Provider Affiliation -- NYD
+ Degree Title 1 -dropdown-- education
+ Degree Country 1 --dropdown -- country
+ Degree Year 1 -- dropdown -- form gen
+ Degree Title 2 -- dropdown -- education
+ Degree Country 2 -- dropdown -- country
+ Degree Year 2 -- dropdown -- form gen
+ Certification Title 1 -- 
+ Certification Country 1 -- dropdown -- country
+ Certification Year 1 -- dropdown -- form gen
+ Certification Title 2 --
+ Certification Country 2 -- dropdown -- country
+ Certification Year 2 -- dropdown -- form gen
+ Certification Title 3 --
+ Certification Country 3 -- dropdown -- country
+ Certification Year 3 --  dropdown -- form gen
+ Years of Exp -- dropdown -- form gen -- doctor - years_exp
+ Specialization 1 -- dropdown -- speciality
+ Specialization 2 -- 
+ Specialization 3 -- 
+FT Rating -- shouldnt be in form
+Licence Number -- textbox -- doctor -- license_number
+Vid 1 -- textbox -- doctor -- vid_1
+Vid 2 -- textbox -- doctor -- vid _2
+Vid 3 -- textbox -- doctor -- vid_3
+Languages -- textbox- comma sep - doctor - languages
+Memberships -- textbox -- memberships -- member_id
+Awards -- NYD
+Statement -- textarea -- doctor -- statement
+Number Recommendations -- textbox -- reviews -- is_reco = true -- reco
