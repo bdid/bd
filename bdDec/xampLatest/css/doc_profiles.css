@@ -3,8 +3,9 @@
 	width: 1040px;
 }
 .main_content ul {
-	padding-top: 10px;
-	width: 1040px;
+	padding: 10px 0 0 0;
+	width: 100%;
+	
 }
 h1 {
 	font-size: 18pt;
@@ -43,7 +44,7 @@ h6 {
 .main_content ul li {
 	float: left;
 	list-style: none outside none;
-	width: 50%;
+	width: 48%;
 	height: 177px;
 	margin-bottom: 60px;
 }
@@ -62,7 +63,10 @@ h6 {
 	height: 157px;
 	background: url("../images/DocPageGradient.png") repeat scroll 0 0 transparent;
 	padding: 20px;
-	width: 80%
+	width: 92%;
+}
+.main_content ul li:nth-child(odd){
+	margin-right: 4%;
 }
 
 .docDescrip {

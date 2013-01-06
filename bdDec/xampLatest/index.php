@@ -5,7 +5,7 @@ include ("modules/common/header.php");
 <div class="divGradient1"></div>
 
 <?php
-		$name = $_GET['mod'];
+		$name = mysql_real_escape_string($_GET['mod']);
 		$modpathModel = "modules/$name/Model.php";
 		$modpathView = "modules/$name/View.php";
 		
